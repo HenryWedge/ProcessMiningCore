@@ -3,13 +3,13 @@ import unittest
 
 import pm4py
 
-from process_mining_core.algorithms.petri_net_creator import PetriNetCreator
+from process_mining_core.datastructure.converter.heuristics_net_petri_net_converter import HeuristicsNetPetriNetConverter
 from process_mining_core.datastructure.core.event import Event
 from process_mining_core.datastructure.core.event_log import SerializableEventLog
 from process_mining_core.datastructure.core.model.heuristics_net import HeuristicsNet
 from process_mining_core.datastructure.core.model.petri_net import SerializablePetriNet
 
-petriNetCreator: PetriNetCreator = PetriNetCreator()
+petriNetCreator: HeuristicsNetPetriNetConverter = HeuristicsNetPetriNetConverter()
 
 
 class PetriNetCreatorTest(unittest.TestCase):
