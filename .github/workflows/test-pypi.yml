@@ -40,7 +40,7 @@ jobs:
 
     environment:
       name: testpypi
-      url: https://test.pypi.org/p/distributed-event-factory
+      url: https://test.pypi.org/p/process-mining-core
 
     permissions:
       id-token: write
