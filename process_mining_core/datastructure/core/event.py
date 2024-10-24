@@ -1,15 +1,13 @@
-from distributed_event_factory.core.event import CaseId
-
 class Event:
-    def __init__(self, timestamp, sensor_value, case_id: CaseId, sensor_name, group_id):
+    def __init__(self, timestamp, activity, case_id, node, group_id):
         self.timestamp = timestamp
-        self.activity: any = sensor_value
-        self.caseId: CaseId = case_id
-        self.node: str = sensor_name
+        self.activity: any = activity
+        self.case_id: str = case_id
+        self.node: str = node
         self.group: str = group_id
 
     def get_case(self):
-        return self.caseId
+        return self.case_id
 
     def get_activity(self):
         return self.activity

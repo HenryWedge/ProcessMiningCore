@@ -2,6 +2,7 @@ import string
 from typing import Dict
 
 
+
 class DirectlyFollowsGraph:
 
     def __init__(self, counted_relations: Dict[tuple[string, string], int], start_activities=None, end_activities=None):
@@ -21,3 +22,4 @@ class DirectlyFollowsGraph:
         for a in self.relations:
             output += f"{a}:{self.relations[a]}, "
         return output
+
