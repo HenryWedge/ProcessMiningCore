@@ -21,7 +21,7 @@ class SerializableEventLog:
         for i, event in enumerate(self.events):
             event_log["concept:name"][i] = event.activity
             event_log["time:timestamp"][i] = pandas.to_datetime(event.timestamp)
-            event_log["case:concept:name"][i] = event.case
+            event_log["case:concept:name"][i] = event.caseid
             event_log["date"][i] = pandas.to_datetime(datetime.datetime.now())
 
         return DataFrame(data=event_log)
