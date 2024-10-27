@@ -16,7 +16,7 @@ class DirectlyFollowsGraphCreator:
 
     def process(self, event: Event) -> DirectlyFollowsGraph | None:
         self.processedEvents += 1
-        case_id = event.case_id
+        case_id = event.case
         activity = event.activity
         sample_size = self.sample_size
         self.current_bucket = int(self.processedEvents / sample_size)

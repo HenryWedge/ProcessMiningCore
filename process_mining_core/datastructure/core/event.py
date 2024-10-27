@@ -2,12 +2,12 @@ class Event:
     def __init__(self, timestamp, activity, case_id, node, group_id):
         self.timestamp = timestamp
         self.activity: any = activity
-        self.case_id: str = case_id
+        self.case: str = case_id
         self.node: str = node
         self.group: str = group_id
 
     def get_case(self):
-        return self.case_id
+        return self.case
 
     def get_activity(self):
         return self.activity
